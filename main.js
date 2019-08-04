@@ -277,10 +277,6 @@ const UICtrl = (function(){
             document.querySelector(UISelectors.deleteBtn).style.display = 'inline';
             document.querySelector(UISelectors.backBtn).style.display = 'inline';
             document.querySelector(UISelectors.addBtn).style.display = 'none';
-            // document.querySelector(UISelectors.updateBtn).style.display = 'inline';
-            // document.querySelector(UISelectors.deleteBtn).style.display = 'inline';
-            // document.querySelector(UISelectors.backBtn).style.display = 'inline';
-            // document.querySelector(UISelectors.addBtn).style.display = 'none';
         },
         getSelectors: function(){
             return UISelectors;
@@ -346,46 +342,7 @@ const App = (function(ItemCtrl,StorageCtrl,UICtrl){
         }
 
         e.preventDefault();
-    }
-
-    // const itemAddSubmit = function(e){
-    //     const input = UICtrl.getItemInput();
-    //     if(input.name !== '' && input.calories !== ''){
-    //         const newItem = ItemCtrl.addItem(input.name, input.calories);
-    //         UICtrl.addListItem(newItem);
-    //         const totalCalories = ItemCtrl.getTotalCalories();
-    //         UICtrl.showTotalCalories(totalCalories);
-    //         StorageCtrl.storeItem(newItem);
-    //         UICtrl.clearInput();
-    //     }
-    //     e.preventDefault();
-    // }
-
-
-    // const itemEditClick = function(e){
-    //     if(e.target.classList.contains('edit-item')){
-    //         //Get list item id
-    //         const listId = e.target.parentElement.parentElement.id;
-            
-    //         //Break into an array
-    //         const listIdArr = listId.split('-');
-
-    //         //Get the actual id
-    //         const id = parseInt(listIdArr[1]);
-
-    //         //Get item
-    //         const itemToEdit = ItemCtrl.getItemById(id);
-
-    //         //Set current item
-    //         ItemCtrl.setCurrentItem(itemToEdit);
-
-    //         //Add item to form
-    //         UICtrl.addItemToForm();
-    //     }
-
-    //     e.preventDefault();
-    // }
-
+    }  
     const itemEditClick = function(e){
         if(e.target.classList.contains('edit-item')){
             const listId = e.target.parentElement.parentElement.id;
@@ -397,7 +354,6 @@ const App = (function(ItemCtrl,StorageCtrl,UICtrl){
         }
         e.prevenDefault();
     }
-
 
     //Update item detail
     const itemUpdateSubmit = function(e){
